@@ -1,0 +1,73 @@
+#include <iostream>
+#include <iterator>
+#include <vector>
+
+//using namespace std;
+
+/*template <typename T>
+void fill(T first, T last, const T& value)
+{
+    for (T it = first; it != last; ++it)
+    {
+        *it = value;
+    }
+}
+
+template <typename T, typename Predicate>
+bool all_of(T first, T last, Predicate f)
+{
+    for (T it = first; it != last; ++it)
+    {
+        if (!f(2))
+            return false;
+    }
+
+    return true;
+}
+
+template <typename T, typename Predicate>
+T find_if(T first, T last, Predicate f)
+{
+    for (T it = first; it != last; ++it)
+    {
+        if (f(*it))
+            return it;
+    }
+    return last;
+}*/
+
+template <typename T, typename Predicate>
+T any_of(T first, T last, Predicate f)
+{
+    for (T it = first; it != last; ++it)
+    {
+        if (f(*it))
+            return it;
+    }
+    return last;
+}
+
+int main()
+{
+    freopen("in","r",stdin);
+    freopen("out","w",stdout);
+
+    /*std::vector<int> v(5);
+
+    fill(v.begin(), v.end(), 20);
+
+    for (auto i = 0; i < v.size(); ++i)
+        std::cout << v[i] << ' ';
+
+    std::cout << std::endl;
+
+    v[2] = 10;
+
+    std::cout << all_of(v.begin(), v.end(), [](int x){return x == 20;}) << std::endl;
+
+    auto it = find_if(v.begin(), v.end(), [](int x){return x == 10;});
+    if (it != v.end())
+        std::cout << *it;*/
+
+    return 0;
+}

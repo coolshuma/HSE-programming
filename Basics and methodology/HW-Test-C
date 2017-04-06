@@ -1,0 +1,19 @@
+up
+loop 3
+    paint
+    right
+    loop 4
+        right
+        right
+        paint
+        loop 2
+            left
+            paint
+        right
+        right
+        paint
+    paint
+    down
+    down
+    paint
+down
